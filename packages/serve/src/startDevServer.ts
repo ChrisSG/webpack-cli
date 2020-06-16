@@ -25,7 +25,7 @@ export default function startDevServer(compiler, options): void {
         options.socket = socket;
     }
 
-    const server = new Server(compiler, options);
+    const server = new Server(compiler, devServerOptions);
     server.listen(socket || port, host, (err): void => {
         if (err) {
             throw err;
